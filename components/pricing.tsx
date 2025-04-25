@@ -61,42 +61,46 @@ export default function Pricing() {
           </Card>
 
           {/* Business Pack (avec ruban Populaire) */}
-          <Card className="relative flex flex-col">
+          <Card className="relative">
             <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">
               Populaire
             </span>
 
-            <CardHeader className="mt-3">
-              <CardTitle className="font-medium">Business</CardTitle>
-              <span className="my-3 block text-2xl font-semibold">1 300 €</span>
-              <CardDescription className="text-sm">
-                Parfait pour les TPE/PME
-              </CardDescription>
-            </CardHeader>
+            <div className="flex flex-col">
+              <CardHeader>
+                <CardTitle className="font-medium">Business</CardTitle>
+                <span className="my-3 block text-2xl font-semibold">
+                  1 300 €
+                </span>
+                <CardDescription className="text-sm">
+                  Parfait pour les TPE/PME
+                </CardDescription>
+              </CardHeader>
 
-            <CardContent className="space-y-4">
-              <hr className="border-dashed" />
-              <ul className="list-outside space-y-3 text-sm">
-                {[
-                  "Site 5–7 pages ou petit e-commerce (≤ 20 produits)",
-                  "Design sur mesure",
-                  "CMS + Paiement en ligne",
-                  "Newsletter & SEO optimisé",
-                  "Support 15 jours",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <Check className="size-3" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
+              <CardContent className="space-y-4">
+                <hr className="border-dashed" />
+                <ul className="list-outside space-y-3 text-sm">
+                  {[
+                    "Site 5–7 pages ou petit e-commerce (≤ 20 produits)",
+                    "Design sur mesure",
+                    "CMS + Paiement en ligne",
+                    "Newsletter & SEO optimisé",
+                    "Support 15 jours",
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <Check className="size-3" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
 
-            <CardFooter className="mt-auto">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="#contact">Choisir ce pack</Link>
-              </Button>
-            </CardFooter>
+              <CardFooter className="mt-auto">
+                <Button asChild variant="outline" className="w-full">
+                  <Link href="#contact">Choisir ce pack</Link>
+                </Button>
+              </CardFooter>
+            </div>
           </Card>
 
           {/* Entreprise Pack */}
