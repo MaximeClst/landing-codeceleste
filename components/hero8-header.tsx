@@ -28,6 +28,9 @@ export const HeroHeader = () => {
                 className="flex items-center space-x-2"
               >
                 <Logo />
+                <span className="text-lg font-bold text-accent-foreground">
+                  Code Celeste
+                </span>
               </Link>
 
               <button

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SiteConfig } from "@/src/site.config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Code Celeste",
-  description: "Forfaits & solution web / mobile",
+  title: SiteConfig.title,
+  description: SiteConfig.description,
 };
 
 export default function RootLayout({
