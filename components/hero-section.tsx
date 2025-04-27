@@ -1,13 +1,34 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { HeroHeader } from "@/components/hero8-header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+import { useEffect, useRef } from "react";
+import { annotate } from "rough-notation";
+import { Code } from "./Code";
+import { GithubIcon } from "@/src/icons/GithubIcon";
+import { StripeIcon } from "@/src/icons/StripeIcon";
+import { OpenAiIcon } from "@/src/icons/OpenAiIcon";
+import { NextJsIcon } from "@/src/icons/NextJsIcon";
+import { TailwindIcon } from "@/src/icons/TailwindIcon";
 
 export default function HeroSection() {
+  const keyRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (keyRef.current) {
+      const annotation = annotate(keyRef.current, {
+        type: "circle",
+        color: "#F59E0B",
+        padding: 4,
+        strokeWidth: 3,
+      });
+      annotation.show();
+    }
+  });
   return (
     <>
       <HeroHeader />
@@ -17,42 +38,36 @@ export default function HeroSection() {
             <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
               <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
                 <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-7xl">
-                  Ship 10x Faster with NS
+                  Votre projet web,{" "}
+                  <span ref={keyRef} className="relative inline-block">
+                    clé en main
+                  </span>
+                  et sans effort
                 </h1>
                 <p className="mt-8 max-w-2xl text-pretty text-lg">
-                  Highly customizable components for building modern websites
-                  and applications that look and feel the way you mean it.
+                  Bénéficiez d’un service expert qui transforme vos idées en un
+                  site ou une app performante, livrée <Code>rapidement</Code> et
+                  prêt à l’emploi.
                 </p>
 
-                <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
-                  <Button asChild size="lg" className="px-5 text-base">
-                    <Link href="#link">
-                      <span className="text-nowrap">Start Building</span>
+                <div className="mt-12 flex flex-wrap justify-center gap-4">
+                  <Button asChild size="lg">
+                    <Link href="/">
+                      <span>Get Started</span>
                     </Link>
                   </Button>
-                  <Button
-                    key={2}
-                    asChild
-                    size="lg"
-                    variant="ghost"
-                    className="px-5 text-base"
-                  >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+
+                  <Button asChild size="lg" variant="outline">
+                    <Link href="/">
+                      <span>Take a call</span>
                     </Link>
                   </Button>
                 </div>
               </div>
-              <Image
-                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
-                src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605150/abstract-bg_wq4f8w.jpg"
-                alt="Abstract Object"
-                height="4000"
-                width="3000"
-              />
             </div>
           </div>
         </section>
+        {/* { carousel } */}
         <section className="bg-background pb-16 md:pb-32">
           <div className="group relative m-auto max-w-6xl px-6">
             <div className="flex flex-col items-center md:flex-row">
@@ -62,32 +77,33 @@ export default function HeroSection() {
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
                 <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-4 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/github.svg"
-                      alt="GitHub Logo"
-                      height="16"
-                      width="auto"
+                    <GithubIcon
+                      className="mx-auto h-6 w-auto fill-current text-white"
+                      aria-label="GitHub"
                     />
                   </div>
-
                   <div className="flex">
-                    <img
-                      className="mx-auto h-5 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                      alt="Lemon Squeezy Logo"
-                      height="20"
-                      width="auto"
+                    <StripeIcon
+                      className="mx-auto h-6 w-auto fill-current text-white"
+                      aria-label="Stripe"
                     />
                   </div>
-
                   <div className="flex">
-                    <img
-                      className="mx-auto h-6 w-fit dark:invert"
-                      src="https://html.tailus.io/blocks/customers/openai.svg"
-                      alt="OpenAI Logo"
-                      height="24"
-                      width="auto"
+                    <OpenAiIcon
+                      className="mx-auto h-6 w-auto fill-current text-white"
+                      aria-label="OpenAI"
+                    />
+                  </div>
+                  <div className="flex">
+                    <NextJsIcon
+                      className="mx-auto h-6 w-auto fill-current text-white"
+                      aria-label="Next.js"
+                    />
+                  </div>
+                  <div className="flex">
+                    <TailwindIcon
+                      className="mx-auto h-6 w-auto fill-current text-white"
+                      aria-label="Tailwind CSS"
                     />
                   </div>
                 </InfiniteSlider>
