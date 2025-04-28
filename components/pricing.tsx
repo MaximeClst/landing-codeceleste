@@ -63,7 +63,7 @@ export default function Pricing() {
           {/* Pro Pack */}
           <Card className="relative flex flex-col justify-between p-6">
             <span className="bg-linear-to-br/increasing absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full from-purple-400 to-amber-300 px-3 py-1 text-xs font-medium text-amber-950 ring-1 ring-inset ring-white/20 ring-offset-1 ring-offset-gray-950/5">
-              Populair
+              Populaire
             </span>
 
             <CardHeader>
@@ -103,9 +103,7 @@ export default function Pricing() {
           <Card className="flex flex-col justify-between p-6">
             <CardHeader>
               <CardTitle className="font-medium">Entreprise</CardTitle>
-              <span className="my-3 block text-2xl font-semibold">
-                $29 / mo
-              </span>
+              <span className="my-3 block text-2xl font-semibold">2500€</span>
               <CardDescription className="text-sm">
                 Solution complète sur mesure
               </CardDescription>
