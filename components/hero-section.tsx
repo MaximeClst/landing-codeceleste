@@ -46,8 +46,8 @@ export default function HeroSection() {
                 </h1>
                 <p className="mt-8 max-w-2xl text-pretty text-lg">
                   Bénéficiez d’un service expert qui transforme vos idées en un
-                  site ou une app performante, livrée <Code>rapidement</Code> et
-                  prêt à l’emploi.
+                  site web performant, livrée <Code>rapidement</Code> et prêt à
+                  l’emploi.
                 </p>
 
                 <div className="mt-12 flex flex-wrap justify-center gap-4">
