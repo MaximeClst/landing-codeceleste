@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function Pricing() {
   return (
@@ -19,16 +19,16 @@ export default function Pricing() {
             Forfaits sur mesure
           </h1>
           <p>
-            Choisissez le pack qui correspond à votre projet web ou mobile, de
-            la vitrine simple à la solution SaaS complète.
+            Choisissez le pack qui correspond à votre projet web, de la vitrine
+            simple à la solution SaaS complète.
           </p>
         </div>
 
         <div className="mt-8 grid gap-6 md:mt-20 md:grid-cols-3">
           <Card className="flex flex-col">
             <CardHeader>
-              <CardTitle className="font-medium">Free</CardTitle>
-              <span className="my-3 block text-2xl font-semibold">$0 / mo</span>
+              <CardTitle className="font-medium">Basic</CardTitle>
+              <span className="my-3 block text-2xl font-semibold">800 €</span>
               <CardDescription className="text-sm">Per editor</CardDescription>
             </CardHeader>
 
@@ -65,7 +65,7 @@ export default function Pricing() {
               <CardHeader>
                 <CardTitle className="font-medium">Pro</CardTitle>
                 <span className="my-3 block text-2xl font-semibold">
-                  $19 / mo
+                  1500 €
                 </span>
                 <CardDescription className="text-sm">
                   Per editor
@@ -105,10 +105,8 @@ export default function Pricing() {
 
           <Card className="flex flex-col">
             <CardHeader>
-              <CardTitle className="font-medium">Startup</CardTitle>
-              <span className="my-3 block text-2xl font-semibold">
-                $29 / mo
-              </span>
+              <CardTitle className="font-medium">Plan Complet</CardTitle>
+              <span className="my-3 block text-2xl font-semibold">3000 €</span>
               <CardDescription className="text-sm">Per editor</CardDescription>
             </CardHeader>
 
