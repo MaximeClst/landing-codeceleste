@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 export default function About() {
   return (
     <section className="py-16">
-      <div className="max-w-xl mx-auto px-6">
+      <div className="max-w-2xl mx-auto px-6">
         <Card className="bg-transparent border border-white/20 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-shrink-0">
@@ -21,29 +21,47 @@ export default function About() {
               <h2 className="text-2xl font-bold">
                 Salut, c&apos;est Maxime 👋
               </h2>
-              <p className="text-muted-foreground max-w-md">
-                Je suis développeur full stack et j&apos;aide les entreprises et
-                indépendants à lancer leur site en quelques jours, grâce à mes
-                outils et workflows optimisés.
+              <p className="text-muted-foreground max-w-md text-sm">
+                Passionné par les nouvelles technologies web, j&apos;ai toujours
+                à cœur d&apos;accompagner les entreprises dans leur transition
+                numérique.
               </p>
             </div>
           </div>
 
           <div className="mt-5 space-y-6">
-            <p className="text-muted-foreground max-w-prose">
-              Mon objectif ? Vous livrer un produit clé en main, performant et
-              sans prise de tête.
+            <p className="text-muted-foreground max-w-prose text-sm">
+              Au fil de mes premières collaborations, j’ai constaté combien il
+              peut être complexe de lancer un site professionnel : choix des
+              technologies, intégration des formulaires, gestion du suivi
+              client… Sans parler du temps investi, loin de votre cœur de
+              métier.
             </p>
-            <h3>Trois raisons de faire un site avec Code Celeste :</h3>
-            <ul className="list-decimal list-inside space-y-2 text-sm text-muted-foreground">
-              <li>Site vitrine ou e-commerce sur mesure</li>
-              <li>Applications mobiles iOS & Android</li>
-              <li>SaaS et outils back-office sécurisés</li>
+            <p className="text-muted-foreground max-w-prose text-sm">
+              C&apos;est pourquoi j&apos;ai créé Code Celeste :
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+              <li>
+                Pour vous offrir une vitrine web sur-mesure, qui reflète vos
+                valeurs et vos ambitions, sans que vous ayez à toucher une seule
+                ligne de code.
+              </li>
+              <li>
+                Pour mettre en place un suivi client personnalisé (formulaires,
+                newsletter, CRM léger) qui vous permet de transformer chaque
+                visite en opportunité de croissance.
+              </li>
+              <li>
+                Pour accélérer le développement grâce à mes workflows optimisés,
+                mêlant méthodes éprouvées et outils IA, tout en garantissant un
+                résultat 100 % humain, fiable et évolutif.
+              </li>
             </ul>
             <p className="text-sm text-muted-foreground max-w-prose">
-              Passionné par l&apos;IA, je l&apos;utilise en interne pour
-              accélérer le développement de l&apos;application tout en
-              garantissant un résultat 100 % humain et fiable.
+              Mon ambition ? Vous délivrer un site clé-en-main, performant et
+              pérenne, qui vous libère du temps pour vous concentrer sur
+              l&apos;essentiel : votre cœur de métier. Ensemble, passons au
+              niveau supérieur !
             </p>
           </div>
         </Card>
