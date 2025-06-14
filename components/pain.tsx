@@ -13,8 +13,8 @@ export const PainSection = () => {
       <div className="flex w-full flex-col items-center gap-3 lg:gap-4 xl:gap-6">
         <Typography variant="h1">J&apos;aime Code Celeste...</Typography>
         <Typography variant="large">
-          Mais je perds du temps à passer sur des sites qui réalise des sites à
-          ma place.
+          Mais au final, je perds surtout mon temps à essayer de créer mon site
+          moi-même.
         </Typography>
         <div className="flex items-start gap-4 max-lg:flex-col">
           <div className="flex-1 rounded-lg bg-red-500/20 p-4 lg:p-6">

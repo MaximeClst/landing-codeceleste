@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,10 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useStripeCheckout } from "@/lib/use-stripe-checkout";
 import { Check } from "lucide-react";
-import Link from "next/link";
 
 export default function Pricing() {
+  const { redirectToCheckout } = useStripeCheckout();
+
+  const handleCheckout = (priceId: string) => {
+    redirectToCheckout(priceId);
+  };
+
   return (
     <section id="pricing" className="py-16 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
@@ -53,8 +61,12 @@ export default function Pricing() {
             </CardContent>
 
             <CardFooter className="flex-shrink-0">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="">Choisir Starter</Link>
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => handleCheckout("price_1RZrcGE4pHOSSt8IeAkZF5xu")}
+              >
+                Choisir Starter
               </Button>
             </CardFooter>
           </Card>
@@ -92,8 +104,12 @@ export default function Pricing() {
             </CardContent>
 
             <CardFooter className="flex-shrink-0">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="">Choisir All-in</Link>
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => handleCheckout("price_1RZrchE4pHOSSt8IyYACLJID")}
+              >
+                Choisir All-in
               </Button>
             </CardFooter>
           </Card>
@@ -125,8 +141,12 @@ export default function Pricing() {
             </CardContent>
 
             <CardFooter className="flex-shrink-0">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="">Get Started</Link>
+              <Button
+                variant="outline"
+                className="w-full"
+                onClick={() => handleCheckout("price_1RZrd3E4pHOSSt8IRjyyjqao")}
+              >
+                Choisir Plan Complet
               </Button>
             </CardFooter>
           </Card>
