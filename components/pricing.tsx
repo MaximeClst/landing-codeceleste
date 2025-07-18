@@ -63,7 +63,7 @@ export default function Pricing() {
             <CardFooter className="flex-shrink-0">
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full cursor-pointer"
                 onClick={() => handleCheckout("price_1RZrcGE4pHOSSt8IeAkZF5xu")}
               >
                 Choisir Starter
@@ -106,7 +106,7 @@ export default function Pricing() {
             <CardFooter className="flex-shrink-0">
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full cursor-pointer"
                 onClick={() => handleCheckout("price_1RZrchE4pHOSSt8IyYACLJID")}
               >
                 Choisir All-in
@@ -143,7 +143,7 @@ export default function Pricing() {
             <CardFooter className="flex-shrink-0">
               <Button
                 variant="outline"
-                className="w-full"
+                className="w-full cursor-pointer"
                 onClick={() => handleCheckout("price_1RZrd3E4pHOSSt8IRjyyjqao")}
               >
                 Choisir Plan Complet

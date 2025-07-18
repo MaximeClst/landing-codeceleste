@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 
 export default function About() {
   return (
-    <section className="py-16">
+    <section id="about" className="py-16">
       <div className="max-w-xl mx-auto px-6">
         <Card className="bg-transparent border border-white/20 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row items-center gap-6">

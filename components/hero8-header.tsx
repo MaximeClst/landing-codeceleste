@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { Logo } from "./logo";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import React from "react";
+import { Logo } from "./logo";
 
 const menuItems = [
   { name: "About", href: "#about" },
-  { name: "Testimonials", href: "#testimonial" },
   { name: "Pricing", href: "#pricing" },
+  { name: "Testimonials", href: "#testimonial" },
 ];
 
 export const HeroHeader = () => {
